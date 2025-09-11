@@ -12,10 +12,11 @@ interface WhyChooseUsSectionProps {
         alt: string;
     };
     buttonText: string;
+    buttonHref: string;
     className?: string;
 }
 
-export default function WhyChooseUsSection({ title, points, image, buttonText, className = '' }: WhyChooseUsSectionProps) {
+export default function WhyChooseUsSection({ title, points, image, buttonText, buttonHref, className = '' }: WhyChooseUsSectionProps) {
     return (
         <section className={`relative overflow-hidden bg-hijauwhy py-16 font-roboto lg:py-24 ${className}`}>
             {/* Circular Image positioned at bottom left */}
@@ -66,9 +67,12 @@ export default function WhyChooseUsSection({ title, points, image, buttonText, c
                         </div>
 
                         {/* CTA Button */}
-                        <button className="transform cursor-pointer rounded-lg bg-tombol px-8 py-4 text-base font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-orange-600 hover:shadow-xl lg:text-lg">
+                        <a
+                            href={buttonHref}
+                            className="transform cursor-pointer rounded-lg bg-tombol px-8 py-4 text-base font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-orange-600 hover:shadow-xl lg:text-lg"
+                        >
                             {buttonText}
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

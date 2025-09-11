@@ -37,7 +37,7 @@ const WhySLFSection: React.FC<WhySLFSectionProps> = ({ title = 'Mengapa SLF Pent
                             key={index}
                             className="flex min-h-[300px] flex-col items-center justify-center rounded-xl border-b-4 border-b-hijaunavbar bg-white p-10 py-12 shadow-lg drop-shadow-2xl transition-shadow duration-300 hover:shadow-xl"
                         >
-                            <h3 className="mb-6 text-center text-xl font-semibold text-black">{card.title}</h3>
+                            <h3 className="mb-6 text-center text-xl font-semibold text-black uppercase">{card.title}</h3>
                             <p className="flex-grow text-center leading-relaxed text-black">{card.description}</p>
                         </div>
                     ))}

@@ -8,6 +8,7 @@ interface SLFServicesCTA {
     title: string;
     subtitle?: string;
     buttonText: string;
+    buttonLink: string;
 }
 
 interface SLFServicesSectionProps {
@@ -22,14 +23,7 @@ interface SLFServicesSectionProps {
     className?: string;
 }
 
-export default function SLFServicesSection({
-    title,
-    subtitle,
-    points,
-    image,
-    cta,
-    className = '',
-}: SLFServicesSectionProps) {
+export default function SLFServicesSection({ title, subtitle, points, image, cta, className = '' }: SLFServicesSectionProps) {
     return (
         <section className={`relative overflow-hidden bg-hijauwhy py-16 font-roboto lg:py-24 ${className}`}>
             {/* Circular Image positioned at bottom left */}
@@ -84,15 +78,16 @@ export default function SLFServicesSection({
 
                         {/* CTA Section */}
                         <div className="rounded-2xl border border-white/20 bg-hijautime p-6 backdrop-blur-sm lg:p-8">
-                            <h3 className="mb-3 text-2xl font-bold text-white lg:text-3xl">{cta.title}</h3>
-                            {cta.subtitle && (
-                                <p className="mb-6 text-base opacity-90 lg:text-lg">{cta.subtitle}</p>
-                            )}
+                            <h3 className="mb-10 text-2xl font-bold text-white lg:text-3xl">{cta.title}</h3>
+                            {cta.subtitle && <p className="mb-6 text-base opacity-90 lg:text-lg">{cta.subtitle}</p>}
 
                             {/* CTA Button */}
-                            <button className="transform cursor-pointer rounded-lg bg-tombol px-8 py-4 text-base font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-orange-600 hover:shadow-xl lg:text-lg">
+                            <a
+                                href={cta.buttonLink}
+                                className="transform cursor-pointer rounded-lg bg-tombol px-8 py-4 text-base font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-orange-600 hover:shadow-xl lg:text-lg"
+                            >
                                 {cta.buttonText}
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -101,4 +96,4 @@ export default function SLFServicesSection({
     );
 }
 
-export type { SLFServicePoint, SLFServicesSectionProps, SLFServicesCTA };
+export type { SLFServicePoint, SLFServicesCTA, SLFServicesSectionProps };

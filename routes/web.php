@@ -10,3 +10,7 @@ Route::get('/', function () {
 Route::get('/slf', function () {
     return Inertia::render('SLF');
 })->name('slf');
+
+Route::get('/pbg', function () {
+    return Inertia::render('PBG');
+})->name('pbg');

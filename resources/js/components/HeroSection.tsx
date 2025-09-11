@@ -10,6 +10,7 @@ interface HeroContent {
         text: string;
         bgColor?: string;
         hoverColor?: string;
+        href: string;
     };
 }
 
@@ -61,13 +62,14 @@ export default function HeroSection({ content, image, className = '' }: HeroSect
                             <p className="mx-auto max-w-sm text-base leading-relaxed text-black lg:mx-0 xl:max-w-lg">{content.description}</p>
                         </div>
                         <div className="flex justify-center lg:justify-start">
-                            <button
+                            <a
+                                href={content.button.href}
                                 className={`cursor-pointer rounded-sm px-8 py-3 font-medium text-white shadow-lg transition-colors duration-200 ${
                                     content.button.bgColor || 'bg-tombol'
                                 } ${content.button.hoverColor || 'hover:bg-orange-600'} hover:shadow-xl`}
                             >
                                 {content.button.text}
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>

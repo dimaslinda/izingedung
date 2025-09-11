@@ -13,7 +13,7 @@ export default function Index() {
             alt: 'Izin Gedung Logo',
         },
         menuItems: [
-            { label: 'HOME', href: '#', isActive: true },
+            { label: 'HOME', href: '/', isActive: true },
             {
                 label: 'SERVICES',
                 href: '#',
@@ -36,11 +36,12 @@ export default function Index() {
             },
             subtitle: 'Bersama Konsultan Sipil Profesional',
             description:
-                'Percayakan Pengurusan Izin Dan Legalitas Bangunan Anda Pada Ahlinya. Kami Menghadirkan Layanan SLF & PBG Yang Cepat, Tepat, Dan Terpercaya. Sehingga Anda Bisa Fokus Pada Pengembangan Bisnis Utama Anda.',
+                'Percayakan pengurusan izin dan legalitas bangunan Anda pada ahlinya. Kami menghadirkan layanan SLF & PBG yang cepat, tepat, dan terpercaya, sehingga Anda bisa fokus pada pembangunan tanpa ribet urusan administrasi.',
             button: {
                 text: 'Konsultasi Sekarang!',
                 bgColor: 'bg-tombol',
                 hoverColor: 'hover:bg-orange-600',
+                href: '/',
             },
         },
         image: {
@@ -69,7 +70,7 @@ export default function Index() {
                 ),
                 title: 'SERTIFIKAT LAIK FUNGSI',
                 description:
-                    'Bukti kan Bangunan Anda Aman Dan Layak Digunakan. SLF Memastikan Gedung Memenuhi Standar Keselamatan, Kesehatan, Dan Kenyamanan.',
+                    'Buktikan bangunan Anda aman dan layak digunakan. SLF memastikan gedung memenuhi standar keselamatan, kesehatan, dan kenyamanan.',
                 bgColor: 'bg-transparent',
                 iconBgColor: 'bg-transparent',
             },
@@ -84,7 +85,7 @@ export default function Index() {
                 ),
                 title: 'PERSETUJUAN BANGUNAN GEDUNG',
                 description:
-                    'Bangun Dengan Tenang Dan Sesuai Aturan. PBG Menjamin Desain Dan Konstruksi Anda Sah Secara Hukum Serta Sesuai Standar Teknis.',
+                    'Bangun dengan tenang dan sesuai aturan. PBG menjamin desain dan konstruksi Anda sah secara hukum serta sesuai standar teknis.',
                 bgColor: 'bg-transparent',
                 iconBgColor: 'bg-transparent',
             },
@@ -98,22 +99,22 @@ export default function Index() {
             {
                 number: '1',
                 title: 'Profesional & Berpengalaman',
-                description: 'Tim Ahli Dengan Pengalaman Bertahun-Tahun Di Bidang Konstruksi, Bangunan Dan Perizinan Bangunan.',
+                description: 'Tim ahli dengan pengalaman bertahun-tahun di bidang konstruksi, regulasi, dan perizinan bangunan.',
             },
             {
                 number: '2',
                 title: 'Cepat & Efisien',
-                description: 'Proses Pengurusan Dan Tanpa Ribet, Transparan, Dan Sesuai Kebutuhan Anda.',
+                description: 'Proses pengurusan izin tanpa ribet, transparan, dan sesuai kebutuhan Anda.',
             },
             {
                 number: '3',
                 title: 'Pendampingan Menyeluruh',
-                description: 'Mulai Dari Konsultasi Awal Hingga Izin Terbit, Kami Selalu Mendampingi Anda.',
+                description: 'Mulai dari konsultasi awal hingga izin terbit, kami selalu mendampingi Anda.',
             },
             {
                 number: '4',
                 title: 'Legalitas Terjamin',
-                description: 'Semua Dokumen Dipersiapkan Sah Sesuai Aturan Pemerintah Terbaru, Memberi Anda Rasa Aman Dan Tenang.',
+                description: 'Semua dokumen dipastikan sah sesuai aturan pemerintah terbaru, memberi Anda rasa aman dan tenang.',
             },
         ],
         image: {
@@ -121,6 +122,7 @@ export default function Index() {
             alt: 'Professional team',
         },
         buttonText: 'Konsultasi Sekarang!',
+        buttonHref: '/',
     };
     return (
         <>

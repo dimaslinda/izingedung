@@ -6,55 +6,6 @@ import HeroSection from '../components/HeroSection';
 import Navbar from '../components/Navbar';
 
 export default function SLF() {
-    // Data untuk WhySLF Section
-    const whySLFTitle = 'Mengapa SLF Penting Untuk Bangunan Anda?';
-    const whySLFCards: WhySLFCard[] = [
-        {
-            title: 'LEGALITAS RESMI',
-            description: 'Dengan SLF Bangunan Anda Sah Di Mata Hukum Dan Siap Digunakan Tanpa Hambatan.',
-        },
-        {
-            title: 'JAMINAN KEAMANAN',
-            description: 'Melindungi Penghuni, Pekerja, Maupun Pengunjung Dari Risiko Akibat Kelalaian Teknis.',
-        },
-        {
-            title: 'SYARAT OPERASIONAL',
-            description: 'Wajib Dimiliki Untuk Menjalankan Gedung Komersial, Perkantoran, Pusat Bisnis, Maupun Fasilitas Publik.',
-        },
-    ];
-
-    // Data untuk SLF Services Section
-    const slfServicesData = {
-        title: 'Layanan Kami Dalam',
-        subtitle: 'Pengurusan SLF',
-        points: [
-            {
-                number: '1',
-                title: 'Konsultasi Regulasi & Persyaratan',
-                description: 'Memberikan Pemahaman Jelas Mengenai Aturan Terbaru Yang Berlaku.',
-            },
-            {
-                number: '2',
-                title: 'Pendampingan Audit Teknis',
-                description: 'Membantu Dalam Pemeriksaan Kondisi Fisik Bangunan Hingga Siap Diverikasi.',
-            },
-            {
-                number: '3',
-                title: 'Pengurusan Dokumen Lengkap',
-                description: 'Kami Urus Semua Administrasi Hingga SLF Resmi Diterbitkan.',
-            },
-        ],
-        image: {
-            src: '/img/general/layanan.png',
-            alt: 'SLF Services Team',
-        },
-        cta: {
-            title: 'Ajukan SLF Anda Sekarang & Rasakan Kemudahannya!',
-            subtitle: '',
-            buttonText: 'Konsultasi Sekarang!',
-        } as SLFServicesCTA,
-    };
-
     // Data untuk Navbar
     const navbarData = {
         logo: {
@@ -87,9 +38,10 @@ export default function SLF() {
             description:
                 'Jadikan bangunan Anda aman, layak, dan diakui secara hukum. Sertifikat Laik Fungsi (SLF) adalah bukti resmi bahwa properti Anda memenuhi standar keselamatan, kesehatan, kenyamanan, dan kemudahan sesuai regulasi pemerintah.',
             button: {
-                text: 'Konsultasi SLF Sekarang!',
+                text: 'Konsultasi Sekarang!',
                 bgColor: 'bg-tombol',
                 hoverColor: 'hover:bg-orange-600',
+                href: '/',
             },
         },
         image: {
@@ -101,6 +53,56 @@ export default function SLF() {
                 size: 'cover',
             },
         },
+    };
+
+    // Data untuk WhySLF Section
+    const whySLFTitle = 'Mengapa SLF Penting Untuk Bangunan Anda?';
+    const whySLFCards: WhySLFCard[] = [
+        {
+            title: 'LEGALITAS RESMI',
+            description: 'Dengan SLF, bangunan Anda sah di mata hukum dan siap digunakan tanpa hambatan.',
+        },
+        {
+            title: 'JAMINAN KEAMANAN',
+            description: 'Melindungi penghuni, pekerja, maupun pengunjung dari risiko akibat kelalaian teknis.',
+        },
+        {
+            title: 'SYARAT OPERASIONAL',
+            description: 'Wajib dimiliki untuk menjalankan gedung komersial, perkantoran, pusat bisnis, maupun fasilitas publik.',
+        },
+    ];
+
+    // Data untuk SLF Services Section
+    const slfServicesData = {
+        title: 'Layanan Kami Dalam',
+        subtitle: 'Pengurusan SLF',
+        points: [
+            {
+                number: '1',
+                title: 'Konsultasi Regulasi & Persyaratan',
+                description: 'Memberikan pemahaman jelas mengenai aturan terbaru yang berlaku.',
+            },
+            {
+                number: '2',
+                title: 'Pendampingan Audit Teknis',
+                description: 'Membantu dalam pemeriksaan kondisi fisik bangunan hingga siap diverifikasi.',
+            },
+            {
+                number: '3',
+                title: 'Pengurusan Dokumen Lengkap',
+                description: 'Kami urus semua administrasi hingga SLF resmi diterbitkan.',
+            },
+        ],
+        image: {
+            src: '/img/general/layanan.png',
+            alt: 'SLF Services Team',
+        },
+        cta: {
+            title: 'Ajukan SLF Anda Sekarang & Rasakan Kemudahannya!',
+            subtitle: '',
+            buttonText: 'Konsultasi Sekarang!',
+            buttonLink: '/',
+        } as SLFServicesCTA,
     };
 
     return (
