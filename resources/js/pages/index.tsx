@@ -1,9 +1,9 @@
 import { Head } from '@inertiajs/react';
+import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
 import Navbar from '../components/Navbar';
 import ServicesSection from '../components/ServicesSection';
 import WhyChooseUsSection from '../components/WhyChooseUsSection';
-import Footer from '../components/Footer';
 
 export default function Index() {
     // Data untuk Navbar
@@ -14,7 +14,14 @@ export default function Index() {
         },
         menuItems: [
             { label: 'HOME', href: '#', isActive: true },
-            { label: 'SERVICES', href: '#' },
+            {
+                label: 'SERVICES',
+                href: '#',
+                submenu: [
+                    { label: 'SLF', href: '/slf' },
+                    { label: 'PBG', href: '/pbg' },
+                ],
+            },
             { label: 'CONTACT', href: '#' },
         ],
     };

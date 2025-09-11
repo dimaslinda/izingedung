@@ -30,11 +30,7 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ content, image, className = '' }: HeroSectionProps) {
-    const {
-        overlay = 'rgba(255, 255, 255, 0.85)',
-        position = 'center',
-        size = 'cover'
-    } = image.mobileBackground || {};
+    const { overlay = 'rgba(255, 255, 255, 0.85)', position = 'center', size = 'cover' } = image.mobileBackground || {};
 
     return (
         <section className={`relative flex items-center overflow-hidden bg-white py-25 font-roboto md:min-h-screen md:py-0 lg:bg-white ${className}`}>
@@ -48,7 +44,7 @@ export default function HeroSection({ content, image, className = '' }: HeroSect
                     backgroundRepeat: 'no-repeat',
                 }}
             ></div>
-            
+
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lg:py-12">
                 <div className="flex justify-center lg:justify-start">
                     {/* Hero Content */}
@@ -61,20 +57,14 @@ export default function HeroSection({ content, image, className = '' }: HeroSect
                                 <br />
                                 <span className="text-black">{content.title.line3}</span>
                             </h1>
-                            <p className="mx-auto max-w-lg text-lg font-bold text-black md:text-xl lg:mx-0">
-                                {content.subtitle}
-                            </p>
-                            <p className="mx-auto max-w-sm text-base leading-relaxed text-black lg:mx-0 xl:max-w-lg">
-                                {content.description}
-                            </p>
+                            <p className="mx-auto max-w-lg text-lg font-bold text-black md:text-xl lg:mx-0">{content.subtitle}</p>
+                            <p className="mx-auto max-w-sm text-base leading-relaxed text-black lg:mx-0 xl:max-w-lg">{content.description}</p>
                         </div>
                         <div className="flex justify-center lg:justify-start">
-                            <button 
-                                className={`rounded-sm px-8 py-3 font-medium text-white shadow-lg transition-colors duration-200 ${
+                            <button
+                                className={`cursor-pointer rounded-sm px-8 py-3 font-medium text-white shadow-lg transition-colors duration-200 ${
                                     content.button.bgColor || 'bg-tombol'
-                                } ${
-                                    content.button.hoverColor || 'hover:bg-orange-600'
-                                } hover:shadow-xl`}
+                                } ${content.button.hoverColor || 'hover:bg-orange-600'} hover:shadow-xl`}
                             >
                                 {content.button.text}
                             </button>
@@ -82,7 +72,7 @@ export default function HeroSection({ content, image, className = '' }: HeroSect
                     </div>
                 </div>
             </div>
-            
+
             {/* Hero Image - Background on mobile/tablet, positioned image on large screens */}
             <div className="absolute -top-52 -right-52 z-10 hidden lg:block 2xl:-top-80">
                 <div className="relative">
