@@ -23,6 +23,7 @@ export default function PBG() {
                 ],
             },
             { label: 'CONTACT', href: '#' },
+            { label: 'ARTICLE', href: 'https://izingedung.id/artikel' },
         ],
     };
 
@@ -133,8 +134,14 @@ export default function PBG() {
         <>
             <Head title="PBG - Persetujuan Bangunan Gedung | Konsultan Sipil Profesional">
                 {/* Basic Meta Tags */}
-                <meta name="description" content="Layanan pengurusan Persetujuan Bangunan Gedung (PBG) dengan konsultan sipil profesional. Izin resmi pengganti IMB untuk pembangunan legal." />
-                <meta name="keywords" content="PBG, persetujuan bangunan gedung, izin mendirikan bangunan, IMB, perizinan bangunan, konsultan sipil PBG, izin pembangunan" />
+                <meta
+                    name="description"
+                    content="Layanan pengurusan Persetujuan Bangunan Gedung (PBG) dengan konsultan sipil profesional. Izin resmi pengganti IMB untuk pembangunan legal."
+                />
+                <meta
+                    name="keywords"
+                    content="PBG, persetujuan bangunan gedung, izin mendirikan bangunan, IMB, perizinan bangunan, konsultan sipil PBG, izin pembangunan"
+                />
                 <meta name="author" content="Izin Gedung" />
                 <meta name="robots" content="index, follow" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -143,7 +150,10 @@ export default function PBG() {
                 {/* Open Graph Meta Tags */}
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="PBG - Persetujuan Bangunan Gedung | Konsultan Sipil Profesional" />
-                <meta property="og:description" content="Layanan pengurusan Persetujuan Bangunan Gedung (PBG) dengan konsultan sipil profesional. Izin resmi pengganti IMB untuk pembangunan legal." />
+                <meta
+                    property="og:description"
+                    content="Layanan pengurusan Persetujuan Bangunan Gedung (PBG) dengan konsultan sipil profesional. Izin resmi pengganti IMB untuk pembangunan legal."
+                />
                 <meta property="og:url" content="https://izingedung.id/pbg" />
                 <meta property="og:site_name" content="Izin Gedung" />
                 <meta property="og:image" content="https://izingedung.id/img/general/hero-3.png" />
@@ -154,116 +164,125 @@ export default function PBG() {
                 {/* Twitter Card Meta Tags */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="PBG - Persetujuan Bangunan Gedung | Konsultan Sipil Profesional" />
-                <meta name="twitter:description" content="Layanan pengurusan Persetujuan Bangunan Gedung (PBG) dengan konsultan sipil profesional. Izin resmi pengganti IMB untuk pembangunan legal." />
+                <meta
+                    name="twitter:description"
+                    content="Layanan pengurusan Persetujuan Bangunan Gedung (PBG) dengan konsultan sipil profesional. Izin resmi pengganti IMB untuk pembangunan legal."
+                />
                 <meta name="twitter:image" content="https://izingedung.id/img/general/hero-3.png" />
 
                 {/* Structured Data - Service Schema */}
                 <script type="application/ld+json">
                     {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "Service",
-                        "name": "Persetujuan Bangunan Gedung (PBG)",
-                        "description": "Layanan pengurusan Persetujuan Bangunan Gedung (PBG) sebagai izin resmi pengganti IMB untuk pembangunan yang legal, aman, dan sesuai tata ruang.",
-                        "provider": {
-                            "@type": "Organization",
-                            "name": "Izin Gedung",
-                            "url": "https://izingedung.id"
+                        '@context': 'https://schema.org',
+                        '@type': 'Service',
+                        name: 'Persetujuan Bangunan Gedung (PBG)',
+                        description:
+                            'Layanan pengurusan Persetujuan Bangunan Gedung (PBG) sebagai izin resmi pengganti IMB untuk pembangunan yang legal, aman, dan sesuai tata ruang.',
+                        provider: {
+                            '@type': 'Organization',
+                            name: 'Izin Gedung',
+                            url: 'https://izingedung.id',
                         },
-                        "areaServed": "Indonesia",
-                        "serviceType": "Konsultan Sipil",
-                        "offers": {
-                            "@type": "Offer",
-                            "description": "Pengurusan PBG lengkap dengan analisis dokumen, pendampingan teknis, dan pengurusan perizinan hingga tuntas"
+                        areaServed: 'Indonesia',
+                        serviceType: 'Konsultan Sipil',
+                        offers: {
+                            '@type': 'Offer',
+                            description:
+                                'Pengurusan PBG lengkap dengan analisis dokumen, pendampingan teknis, dan pengurusan perizinan hingga tuntas',
                         },
-                        "hasOfferCatalog": {
-                            "@type": "OfferCatalog",
-                            "name": "Layanan PBG",
-                            "itemListElement": [
+                        hasOfferCatalog: {
+                            '@type': 'OfferCatalog',
+                            name: 'Layanan PBG',
+                            itemListElement: [
                                 {
-                                    "@type": "Offer",
-                                    "itemOffered": {
-                                        "@type": "Service",
-                                        "name": "Analisis Dokumen & Desain",
-                                        "description": "Kami membantu menyiapkan dan menyesuaikan seluruh dokumen teknis dan administratif sesuai persyaratan terbaru."
-                                    }
+                                    '@type': 'Offer',
+                                    itemOffered: {
+                                        '@type': 'Service',
+                                        name: 'Analisis Dokumen & Desain',
+                                        description:
+                                            'Kami membantu menyiapkan dan menyesuaikan seluruh dokumen teknis dan administratif sesuai persyaratan terbaru.',
+                                    },
                                 },
                                 {
-                                    "@type": "Offer",
-                                    "itemOffered": {
-                                        "@type": "Service",
-                                        "name": "Pendampingan Teknis & Administrasi",
-                                        "description": "Tim ahli kami mendampingi Anda dalam setiap tahap, mulai dari pengajuan, koordinasi dengan pihak terkait, hingga verifikasi teknis."
-                                    }
+                                    '@type': 'Offer',
+                                    itemOffered: {
+                                        '@type': 'Service',
+                                        name: 'Pendampingan Teknis & Administrasi',
+                                        description:
+                                            'Tim ahli kami mendampingi Anda dalam setiap tahap, mulai dari pengajuan, koordinasi dengan pihak terkait, hingga verifikasi teknis.',
+                                    },
                                 },
                                 {
-                                    "@type": "Offer",
-                                    "itemOffered": {
-                                        "@type": "Service",
-                                        "name": "Pengurusan Perizinan Hingga Tuntas",
-                                        "description": "Kami mengurus seluruh proses perizinan dari awal hingga PBG resmi diterbitkan."
-                                    }
-                                }
-                            ]
-                        }
+                                    '@type': 'Offer',
+                                    itemOffered: {
+                                        '@type': 'Service',
+                                        name: 'Pengurusan Perizinan Hingga Tuntas',
+                                        description: 'Kami mengurus seluruh proses perizinan dari awal hingga PBG resmi diterbitkan.',
+                                    },
+                                },
+                            ],
+                        },
                     })}
                 </script>
 
                 {/* Structured Data - WebPage Schema */}
                 <script type="application/ld+json">
                     {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "WebPage",
-                        "name": "PBG - Persetujuan Bangunan Gedung",
-                        "description": "Halaman layanan Persetujuan Bangunan Gedung (PBG) untuk pengurusan izin pembangunan yang legal dan sesuai aturan",
-                        "url": "https://izingedung.id/pbg",
-                        "mainEntity": {
-                            "@type": "Service",
-                            "name": "Persetujuan Bangunan Gedung (PBG)",
-                            "description": "Izin resmi yang menggantikan IMB, wajib dimiliki untuk membangun baru, renovasi, maupun merawat bangunan sesuai tata ruang."
+                        '@context': 'https://schema.org',
+                        '@type': 'WebPage',
+                        name: 'PBG - Persetujuan Bangunan Gedung',
+                        description:
+                            'Halaman layanan Persetujuan Bangunan Gedung (PBG) untuk pengurusan izin pembangunan yang legal dan sesuai aturan',
+                        url: 'https://izingedung.id/pbg',
+                        mainEntity: {
+                            '@type': 'Service',
+                            name: 'Persetujuan Bangunan Gedung (PBG)',
+                            description:
+                                'Izin resmi yang menggantikan IMB, wajib dimiliki untuk membangun baru, renovasi, maupun merawat bangunan sesuai tata ruang.',
                         },
-                        "breadcrumb": {
-                            "@type": "BreadcrumbList",
-                            "itemListElement": [
+                        breadcrumb: {
+                            '@type': 'BreadcrumbList',
+                            itemListElement: [
                                 {
-                                    "@type": "ListItem",
-                                    "position": 1,
-                                    "name": "Home",
-                                    "item": "https://izingedung.id"
+                                    '@type': 'ListItem',
+                                    position: 1,
+                                    name: 'Home',
+                                    item: 'https://izingedung.id',
                                 },
                                 {
-                                    "@type": "ListItem",
-                                    "position": 2,
-                                    "name": "PBG",
-                                    "item": "https://izingedung.id/pbg"
-                                }
-                            ]
-                        }
+                                    '@type': 'ListItem',
+                                    position: 2,
+                                    name: 'PBG',
+                                    item: 'https://izingedung.id/pbg',
+                                },
+                            ],
+                        },
                     })}
                 </script>
 
                 {/* Structured Data - FAQ Schema */}
                 <script type="application/ld+json">
                     {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "FAQPage",
-                        "mainEntity": [
+                        '@context': 'https://schema.org',
+                        '@type': 'FAQPage',
+                        mainEntity: [
                             {
-                                "@type": "Question",
-                                "name": "Mengapa PBG begitu penting?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "PBG adalah bukti sah bahwa bangunan Anda telah sesuai dengan ketentuan teknis dan tata ruang dari pemerintah. Dengan PBG, Anda terhindar dari risiko sanksi dan memiliki legalitas penuh."
-                                }
+                                '@type': 'Question',
+                                name: 'Mengapa PBG begitu penting?',
+                                acceptedAnswer: {
+                                    '@type': 'Answer',
+                                    text: 'PBG adalah bukti sah bahwa bangunan Anda telah sesuai dengan ketentuan teknis dan tata ruang dari pemerintah. Dengan PBG, Anda terhindar dari risiko sanksi dan memiliki legalitas penuh.',
+                                },
                             },
                             {
-                                "@type": "Question",
-                                "name": "Apa risiko jika tidak memiliki PBG?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "Tanpa PBG, bangunan berisiko terkena denda, pembongkaran, hingga masalah hukum. PBG melindungi investasi bangunan dari kerugian besar."
-                                }
-                            }
-                        ]
+                                '@type': 'Question',
+                                name: 'Apa risiko jika tidak memiliki PBG?',
+                                acceptedAnswer: {
+                                    '@type': 'Answer',
+                                    text: 'Tanpa PBG, bangunan berisiko terkena denda, pembongkaran, hingga masalah hukum. PBG melindungi investasi bangunan dari kerugian besar.',
+                                },
+                            },
+                        ],
                     })}
                 </script>
             </Head>

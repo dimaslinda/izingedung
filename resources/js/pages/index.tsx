@@ -23,6 +23,7 @@ export default function Index() {
                 ],
             },
             { label: 'CONTACT', href: '#' },
+            { label: 'ARTICLE', href: 'https://izingedung.id/artikel' },
         ],
     };
 
@@ -128,8 +129,14 @@ export default function Index() {
         <>
             <Head title="Konsultan Sipil Profesional - Izin Gedung SLF & PBG Terpercaya">
                 {/* Basic Meta Tags */}
-                <meta name="description" content="Konsultan sipil profesional untuk pengurusan izin gedung SLF dan PBG. Layanan cepat, tepat, dan terpercaya dengan tim berpengalaman." />
-                <meta name="keywords" content="konsultan sipil, izin gedung, SLF, PBG, sertifikat laik fungsi, persetujuan bangunan gedung, konstruksi, perizinan bangunan, konsultan bangunan" />
+                <meta
+                    name="description"
+                    content="Konsultan sipil profesional untuk pengurusan izin gedung SLF dan PBG. Layanan cepat, tepat, dan terpercaya dengan tim berpengalaman."
+                />
+                <meta
+                    name="keywords"
+                    content="konsultan sipil, izin gedung, SLF, PBG, sertifikat laik fungsi, persetujuan bangunan gedung, konstruksi, perizinan bangunan, konsultan bangunan"
+                />
                 <meta name="author" content="Izin Gedung" />
                 <meta name="robots" content="index, follow" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -138,7 +145,10 @@ export default function Index() {
                 {/* Open Graph Meta Tags */}
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Konsultan Sipil Profesional - Izin Gedung SLF & PBG Terpercaya" />
-                <meta property="og:description" content="Konsultan sipil profesional untuk pengurusan izin gedung SLF dan PBG. Layanan cepat, tepat, dan terpercaya dengan tim berpengalaman." />
+                <meta
+                    property="og:description"
+                    content="Konsultan sipil profesional untuk pengurusan izin gedung SLF dan PBG. Layanan cepat, tepat, dan terpercaya dengan tim berpengalaman."
+                />
                 <meta property="og:url" content="https://izingedung.id/" />
                 <meta property="og:site_name" content="Izin Gedung" />
                 <meta property="og:image" content="https://izingedung.id/img/general/hero-1.png" />
@@ -149,57 +159,63 @@ export default function Index() {
                 {/* Twitter Card Meta Tags */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Konsultan Sipil Profesional - Izin Gedung SLF & PBG Terpercaya" />
-                <meta name="twitter:description" content="Konsultan sipil profesional untuk pengurusan izin gedung SLF dan PBG. Layanan cepat, tepat, dan terpercaya dengan tim berpengalaman." />
+                <meta
+                    name="twitter:description"
+                    content="Konsultan sipil profesional untuk pengurusan izin gedung SLF dan PBG. Layanan cepat, tepat, dan terpercaya dengan tim berpengalaman."
+                />
                 <meta name="twitter:image" content="https://izingedung.id/img/general/hero-1.png" />
 
                 {/* Structured Data - Organization Schema */}
                 <script type="application/ld+json">
                     {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "Organization",
-                        "name": "Izin Gedung",
-                        "url": "https://izingedung.id",
-                        "logo": "https://izingedung.id/img/general/logo.png",
-                        "description": "Konsultan sipil profesional untuk pengurusan izin gedung SLF dan PBG dengan layanan cepat, tepat, dan terpercaya.",
-                        "serviceType": ["Konsultan Sipil", "Perizinan Bangunan", "SLF", "PBG"],
-                        "areaServed": "Indonesia",
-                        "hasOfferCatalog": {
-                            "@type": "OfferCatalog",
-                            "name": "Layanan Konsultan Sipil",
-                            "itemListElement": [
+                        '@context': 'https://schema.org',
+                        '@type': 'Organization',
+                        name: 'Izin Gedung',
+                        url: 'https://izingedung.id',
+                        logo: 'https://izingedung.id/img/general/logo.png',
+                        description:
+                            'Konsultan sipil profesional untuk pengurusan izin gedung SLF dan PBG dengan layanan cepat, tepat, dan terpercaya.',
+                        serviceType: ['Konsultan Sipil', 'Perizinan Bangunan', 'SLF', 'PBG'],
+                        areaServed: 'Indonesia',
+                        hasOfferCatalog: {
+                            '@type': 'OfferCatalog',
+                            name: 'Layanan Konsultan Sipil',
+                            itemListElement: [
                                 {
-                                    "@type": "Offer",
-                                    "itemOffered": {
-                                        "@type": "Service",
-                                        "name": "Sertifikat Laik Fungsi (SLF)",
-                                        "description": "Buktikan bangunan Anda aman dan layak digunakan. SLF memastikan gedung memenuhi standar keselamatan, kesehatan, dan kenyamanan."
-                                    }
+                                    '@type': 'Offer',
+                                    itemOffered: {
+                                        '@type': 'Service',
+                                        name: 'Sertifikat Laik Fungsi (SLF)',
+                                        description:
+                                            'Buktikan bangunan Anda aman dan layak digunakan. SLF memastikan gedung memenuhi standar keselamatan, kesehatan, dan kenyamanan.',
+                                    },
                                 },
                                 {
-                                    "@type": "Offer",
-                                    "itemOffered": {
-                                        "@type": "Service",
-                                        "name": "Persetujuan Bangunan Gedung (PBG)",
-                                        "description": "Bangun dengan tenang dan sesuai aturan. PBG menjamin desain dan konstruksi Anda sah secara hukum serta sesuai standar teknis."
-                                    }
-                                }
-                            ]
-                        }
+                                    '@type': 'Offer',
+                                    itemOffered: {
+                                        '@type': 'Service',
+                                        name: 'Persetujuan Bangunan Gedung (PBG)',
+                                        description:
+                                            'Bangun dengan tenang dan sesuai aturan. PBG menjamin desain dan konstruksi Anda sah secara hukum serta sesuai standar teknis.',
+                                    },
+                                },
+                            ],
+                        },
                     })}
                 </script>
 
                 {/* Structured Data - Website Schema */}
                 <script type="application/ld+json">
                     {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "WebSite",
-                        "name": "Izin Gedung",
-                        "url": "https://izingedung.id",
-                        "description": "Website resmi konsultan sipil profesional untuk layanan izin gedung SLF dan PBG",
-                        "publisher": {
-                            "@type": "Organization",
-                            "name": "Izin Gedung"
-                        }
+                        '@context': 'https://schema.org',
+                        '@type': 'WebSite',
+                        name: 'Izin Gedung',
+                        url: 'https://izingedung.id',
+                        description: 'Website resmi konsultan sipil profesional untuk layanan izin gedung SLF dan PBG',
+                        publisher: {
+                            '@type': 'Organization',
+                            name: 'Izin Gedung',
+                        },
                     })}
                 </script>
 

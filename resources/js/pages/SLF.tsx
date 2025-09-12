@@ -23,6 +23,7 @@ export default function SLF() {
                 ],
             },
             { label: 'CONTACT', href: '#' },
+            { label: 'ARTICLE', href: 'https://izingedung.id/artikel' },
         ],
     };
 
@@ -109,8 +110,14 @@ export default function SLF() {
         <>
             <Head title="SLF - Sertifikat Laik Fungsi Bangunan | Konsultan Sipil Profesional">
                 {/* Basic Meta Tags */}
-                <meta name="description" content="Layanan pengurusan Sertifikat Laik Fungsi (SLF) dengan konsultan sipil profesional. Jaminan legalitas dan keamanan bangunan sesuai standar." />
-                <meta name="keywords" content="SLF, sertifikat laik fungsi, izin bangunan, legalitas bangunan, keamanan bangunan, audit teknis bangunan, konsultan sipil SLF" />
+                <meta
+                    name="description"
+                    content="Layanan pengurusan Sertifikat Laik Fungsi (SLF) dengan konsultan sipil profesional. Jaminan legalitas dan keamanan bangunan sesuai standar."
+                />
+                <meta
+                    name="keywords"
+                    content="SLF, sertifikat laik fungsi, izin bangunan, legalitas bangunan, keamanan bangunan, audit teknis bangunan, konsultan sipil SLF"
+                />
                 <meta name="author" content="Izin Gedung" />
                 <meta name="robots" content="index, follow" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -119,7 +126,10 @@ export default function SLF() {
                 {/* Open Graph Meta Tags */}
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="SLF - Sertifikat Laik Fungsi Bangunan | Konsultan Sipil Profesional" />
-                <meta property="og:description" content="Layanan pengurusan Sertifikat Laik Fungsi (SLF) dengan konsultan sipil profesional. Jaminan legalitas dan keamanan bangunan sesuai standar." />
+                <meta
+                    property="og:description"
+                    content="Layanan pengurusan Sertifikat Laik Fungsi (SLF) dengan konsultan sipil profesional. Jaminan legalitas dan keamanan bangunan sesuai standar."
+                />
                 <meta property="og:url" content="https://izingedung.id/slf" />
                 <meta property="og:site_name" content="Izin Gedung" />
                 <meta property="og:image" content="https://izingedung.id/img/general/hero-2.png" />
@@ -130,90 +140,95 @@ export default function SLF() {
                 {/* Twitter Card Meta Tags */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="SLF - Sertifikat Laik Fungsi Bangunan | Konsultan Sipil Profesional" />
-                <meta name="twitter:description" content="Layanan pengurusan Sertifikat Laik Fungsi (SLF) dengan konsultan sipil profesional. Jaminan legalitas dan keamanan bangunan sesuai standar." />
+                <meta
+                    name="twitter:description"
+                    content="Layanan pengurusan Sertifikat Laik Fungsi (SLF) dengan konsultan sipil profesional. Jaminan legalitas dan keamanan bangunan sesuai standar."
+                />
                 <meta name="twitter:image" content="https://izingedung.id/img/general/hero-2.png" />
 
                 {/* Structured Data - Service Schema */}
                 <script type="application/ld+json">
                     {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "Service",
-                        "name": "Sertifikat Laik Fungsi (SLF)",
-                        "description": "Layanan pengurusan Sertifikat Laik Fungsi bangunan untuk memastikan legalitas, keamanan, dan kelayakan bangunan sesuai standar pemerintah.",
-                        "provider": {
-                            "@type": "Organization",
-                            "name": "Izin Gedung",
-                            "url": "https://izingedung.id"
+                        '@context': 'https://schema.org',
+                        '@type': 'Service',
+                        name: 'Sertifikat Laik Fungsi (SLF)',
+                        description:
+                            'Layanan pengurusan Sertifikat Laik Fungsi bangunan untuk memastikan legalitas, keamanan, dan kelayakan bangunan sesuai standar pemerintah.',
+                        provider: {
+                            '@type': 'Organization',
+                            name: 'Izin Gedung',
+                            url: 'https://izingedung.id',
                         },
-                        "areaServed": "Indonesia",
-                        "serviceType": "Konsultan Sipil",
-                        "offers": {
-                            "@type": "Offer",
-                            "description": "Pengurusan SLF lengkap dengan konsultasi regulasi, audit teknis, dan pengurusan dokumen"
+                        areaServed: 'Indonesia',
+                        serviceType: 'Konsultan Sipil',
+                        offers: {
+                            '@type': 'Offer',
+                            description: 'Pengurusan SLF lengkap dengan konsultasi regulasi, audit teknis, dan pengurusan dokumen',
                         },
-                        "hasOfferCatalog": {
-                            "@type": "OfferCatalog",
-                            "name": "Layanan SLF",
-                            "itemListElement": [
+                        hasOfferCatalog: {
+                            '@type': 'OfferCatalog',
+                            name: 'Layanan SLF',
+                            itemListElement: [
                                 {
-                                    "@type": "Offer",
-                                    "itemOffered": {
-                                        "@type": "Service",
-                                        "name": "Konsultasi Regulasi & Persyaratan",
-                                        "description": "Memberikan pemahaman jelas mengenai aturan terbaru yang berlaku."
-                                    }
+                                    '@type': 'Offer',
+                                    itemOffered: {
+                                        '@type': 'Service',
+                                        name: 'Konsultasi Regulasi & Persyaratan',
+                                        description: 'Memberikan pemahaman jelas mengenai aturan terbaru yang berlaku.',
+                                    },
                                 },
                                 {
-                                    "@type": "Offer",
-                                    "itemOffered": {
-                                        "@type": "Service",
-                                        "name": "Pendampingan Audit Teknis",
-                                        "description": "Membantu dalam pemeriksaan kondisi fisik bangunan hingga siap diverifikasi."
-                                    }
+                                    '@type': 'Offer',
+                                    itemOffered: {
+                                        '@type': 'Service',
+                                        name: 'Pendampingan Audit Teknis',
+                                        description: 'Membantu dalam pemeriksaan kondisi fisik bangunan hingga siap diverifikasi.',
+                                    },
                                 },
                                 {
-                                    "@type": "Offer",
-                                    "itemOffered": {
-                                        "@type": "Service",
-                                        "name": "Pengurusan Dokumen Lengkap",
-                                        "description": "Kami urus semua administrasi hingga SLF resmi diterbitkan."
-                                    }
-                                }
-                            ]
-                        }
+                                    '@type': 'Offer',
+                                    itemOffered: {
+                                        '@type': 'Service',
+                                        name: 'Pengurusan Dokumen Lengkap',
+                                        description: 'Kami urus semua administrasi hingga SLF resmi diterbitkan.',
+                                    },
+                                },
+                            ],
+                        },
                     })}
                 </script>
 
                 {/* Structured Data - WebPage Schema */}
                 <script type="application/ld+json">
                     {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "WebPage",
-                        "name": "SLF - Sertifikat Laik Fungsi Bangunan",
-                        "description": "Halaman layanan Sertifikat Laik Fungsi (SLF) untuk pengurusan legalitas dan keamanan bangunan",
-                        "url": "https://izingedung.id/slf",
-                        "mainEntity": {
-                            "@type": "Service",
-                            "name": "Sertifikat Laik Fungsi (SLF)",
-                            "description": "Bukti resmi bahwa properti Anda memenuhi standar keselamatan, kesehatan, kenyamanan, dan kemudahan sesuai regulasi pemerintah."
+                        '@context': 'https://schema.org',
+                        '@type': 'WebPage',
+                        name: 'SLF - Sertifikat Laik Fungsi Bangunan',
+                        description: 'Halaman layanan Sertifikat Laik Fungsi (SLF) untuk pengurusan legalitas dan keamanan bangunan',
+                        url: 'https://izingedung.id/slf',
+                        mainEntity: {
+                            '@type': 'Service',
+                            name: 'Sertifikat Laik Fungsi (SLF)',
+                            description:
+                                'Bukti resmi bahwa properti Anda memenuhi standar keselamatan, kesehatan, kenyamanan, dan kemudahan sesuai regulasi pemerintah.',
                         },
-                        "breadcrumb": {
-                            "@type": "BreadcrumbList",
-                            "itemListElement": [
+                        breadcrumb: {
+                            '@type': 'BreadcrumbList',
+                            itemListElement: [
                                 {
-                                    "@type": "ListItem",
-                                    "position": 1,
-                                    "name": "Home",
-                                    "item": "https://izingedung.id"
+                                    '@type': 'ListItem',
+                                    position: 1,
+                                    name: 'Home',
+                                    item: 'https://izingedung.id',
                                 },
                                 {
-                                    "@type": "ListItem",
-                                    "position": 2,
-                                    "name": "SLF",
-                                    "item": "https://izingedung.id/slf"
-                                }
-                            ]
-                        }
+                                    '@type': 'ListItem',
+                                    position: 2,
+                                    name: 'SLF',
+                                    item: 'https://izingedung.id/slf',
+                                },
+                            ],
+                        },
                     })}
                 </script>
             </Head>
