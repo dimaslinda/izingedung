@@ -38,7 +38,7 @@ interface ServiceSchema extends SchemaOrgBase {
         url: string;
     };
     areaServed?: string;
-    serviceType?: string;
+    category?: string;
 }
 
 interface ArticleSchema extends SchemaOrgBase {

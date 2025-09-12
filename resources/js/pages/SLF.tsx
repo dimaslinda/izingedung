@@ -160,7 +160,7 @@ export default function SLF() {
                             url: 'https://izingedung.id',
                         },
                         areaServed: 'Indonesia',
-                        serviceType: 'Konsultan Sipil',
+                        category: 'Konsultan Sipil',
                         offers: {
                             '@type': 'Offer',
                             description: 'Pengurusan SLF lengkap dengan konsultasi regulasi, audit teknis, dan pengurusan dokumen',

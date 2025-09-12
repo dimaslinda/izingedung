@@ -184,7 +184,7 @@ export default function PBG() {
                             url: 'https://izingedung.id',
                         },
                         areaServed: 'Indonesia',
-                        serviceType: 'Konsultan Sipil',
+                        category: 'Konsultan Sipil',
                         offers: {
                             '@type': 'Offer',
                             description:

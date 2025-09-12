@@ -175,7 +175,7 @@ export default function Index() {
                         logo: 'https://izingedung.id/img/general/logo.png',
                         description:
                             'Konsultan sipil profesional untuk pengurusan izin gedung SLF dan PBG dengan layanan cepat, tepat, dan terpercaya.',
-                        serviceType: ['Konsultan Sipil', 'Perizinan Bangunan', 'SLF', 'PBG'],
+                        knowsAbout: ['Konsultan Sipil', 'Perizinan Bangunan', 'SLF', 'PBG'],
                         areaServed: 'Indonesia',
                         hasOfferCatalog: {
                             '@type': 'OfferCatalog',
