@@ -3,6 +3,7 @@ interface HeroContent {
         line1: string;
         line2: string;
         line3: string;
+        line4?: string;
     };
     subtitle: string;
     description: string;
@@ -52,11 +53,13 @@ export default function HeroSection({ content, image, className = '' }: HeroSect
                     <div className="relative z-20 max-w-2xl space-y-8 text-center lg:text-left">
                         <div className="space-y-6">
                             <h1 className="text-3xl leading-tight font-bold text-black md:text-5xl xl:text-6xl">
-                                {content.title.line1}
+                                {content.title.line1 || ''}
                                 <br />
-                                <span className="text-black">{content.title.line2}</span>
+                                <span className="text-black">{content.title.line2 || ''}</span>
                                 <br />
-                                <span className="text-black">{content.title.line3}</span>
+                                <span className="text-black">{content.title.line3 || ''}</span>
+                                <br />
+                                <span className="text-black">{content.title.line4 || ''}</span>
                             </h1>
                             <p className="mx-auto max-w-lg text-lg font-bold text-black md:text-xl lg:mx-0">{content.subtitle}</p>
                             <p className="mx-auto max-w-sm text-base leading-relaxed text-black lg:mx-0 xl:max-w-lg">{content.description}</p>
@@ -64,6 +67,8 @@ export default function HeroSection({ content, image, className = '' }: HeroSect
                         <div className="flex justify-center lg:justify-start">
                             <a
                                 href={content.button.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className={`cursor-pointer rounded-sm px-8 py-3 font-medium text-white shadow-lg transition-colors duration-200 ${
                                     content.button.bgColor || 'bg-tombol'
                                 } ${content.button.hoverColor || 'hover:bg-orange-600'} hover:shadow-xl`}

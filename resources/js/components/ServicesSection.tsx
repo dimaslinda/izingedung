@@ -39,7 +39,7 @@ export default function ServicesSection({ title, services, className = '' }: Ser
                             <h3 className="mb-4 text-xl leading-tight font-bold text-black">{service.title}</h3>
 
                             {/* Description */}
-                            <p className="text-sm leading-relaxed text-gray-700">{service.description}</p>
+                            <p className="text-sm leading-relaxed font-semibold text-gray-700">{service.description}</p>
                         </div>
                     ))}
                 </div>

@@ -1,9 +1,12 @@
-import SLFServicesSection, { SLFServicesCTA } from '@/components/SLFServicesSection';
+import WhyChooseUsSection from '@/components/WhyChooseUsSection';
 import WhySLFSection, { WhySLFCard } from '@/components/WhySLFSection';
 import { Head } from '@inertiajs/react';
+import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
 import Navbar from '../components/Navbar';
+import SLFRequirementsSection from '../components/SLFRequirementsSection';
+import SLFScopeSection from '../components/SLFScopeSection';
 
 export default function SLF() {
     // Data untuk Navbar
@@ -31,18 +34,19 @@ export default function SLF() {
     const heroData = {
         content: {
             title: {
-                line1: 'Kunci Legalitas',
-                line2: '& Keamanan ',
-                line3: 'Bangunan Anda',
+                line1: 'Jasa Pengurusan',
+                line2: 'Sertifikat Laik',
+                line3: 'Fungsi (SLF)',
+                line4: 'Terpercaya & Resmi',
             },
-            subtitle: ' ',
+            subtitle: 'Pendampingan Pengurusan SLF sesuai Standar Teknis dan PP No. 16 Tahun 2021',
             description:
-                'Jadikan bangunan Anda aman, layak, dan diakui secara hukum. Sertifikat Laik Fungsi (SLF) adalah bukti resmi bahwa properti Anda memenuhi standar keselamatan, kesehatan, kenyamanan, dan kemudahan sesuai regulasi pemerintah.',
+                'Kami membantu penerbitan SLF untuk bangunan baru maupun eksisting. Didukung Tim Pengkaji Teknis bersertifikat untuk memastikan bangunan Anda lolos verifikasi SIMBG dan terhindar dari sanksi administratif.',
             button: {
-                text: 'Konsultasi Sekarang!',
+                text: 'Konsultasi Gratis',
                 bgColor: 'bg-tombol',
                 hoverColor: 'hover:bg-orange-600',
-                href: '/',
+                href: 'https://api.whatsapp.com/send?phone=6285111444499',
             },
         },
         image: {
@@ -61,49 +65,144 @@ export default function SLF() {
     const whySLFCards: WhySLFCard[] = [
         {
             title: 'LEGALITAS RESMI',
-            description: 'Dengan SLF, bangunan Anda sah di mata hukum dan siap digunakan tanpa hambatan.',
+            description:
+                'Dengan Sertifikat Laik Fungsi (SLF), bangunan dinyatakan sah secara hukum oleh pemerintah daerah dan dapat digunakan secara legal.',
         },
         {
             title: 'JAMINAN KEAMANAN',
-            description: 'Melindungi penghuni, pekerja, maupun pengunjung dari risiko akibat kelalaian teknis.',
+            description:
+                'SLF memastikan bangunan memenuhi standar keselamatan teknis untuk melindungi penghuni, pekerja, dan pengunjung dari risiko kegagalan bangunan.',
         },
         {
             title: 'SYARAT OPERASIONAL',
-            description: 'Wajib dimiliki untuk menjalankan gedung komersial, perkantoran, pusat bisnis, maupun fasilitas publik.',
+            description:
+                'Sertifikat Laik Fungsi (SLF) menjadi syarat wajib operasional gedung komersial, perkantoran, pusat bisnis, dan fasilitas publik.',
         },
     ];
 
     // Data untuk SLF Services Section
     const slfServicesData = {
-        title: 'Layanan Kami Dalam',
-        subtitle: 'Pengurusan SLF',
+        title: 'Tahapan Proses Pengurusan Sertifikat ',
+        subtitle: 'Laik Fungsi (SLF)',
         points: [
             {
                 number: '1',
-                title: 'Konsultasi Regulasi & Persyaratan',
-                description: 'Memberikan pemahaman jelas mengenai aturan terbaru yang berlaku.',
+                title: 'Konsultasi Awal & Identifikasi Bangunan',
+                description:
+                    'Identifikasi awal fungsi bangunan, status bangunan (baru atau eksisting), serta kelengkapan dokumen dasar sebagai acuan proses pengurusan SLF.',
             },
             {
                 number: '2',
-                title: 'Pendampingan Audit Teknis',
-                description: 'Membantu dalam pemeriksaan kondisi fisik bangunan hingga siap diverifikasi.',
+                title: 'Pemeriksaan Teknis Bangunan',
+                description:
+                    'Pemeriksaan keandalan bangunan oleh Pengkaji Teknis bersertifikat meliputi aspek arsitektur, struktur, dan utilitas (MEP) sesuai standar teknis PP No. 16 Tahun 2021.',
             },
             {
                 number: '3',
-                title: 'Pengurusan Dokumen Lengkap',
-                description: 'Kami urus semua administrasi hingga SLF resmi diterbitkan.',
+                title: 'Penyusunan & Validasi Dokumen Teknis',
+                description:
+                    'Penyusunan laporan hasil pemeriksaan teknis dan verifikasi kesesuaian dokumen dengan persyaratan SLF sebelum diajukan ke sistem SIMBG.',
+            },
+            {
+                number: '4',
+                title: 'Pengajuan & Verifikasi melalui SIMBG',
+                description:
+                    'Pengajuan dokumen SLF secara resmi melalui sistem SIMBG untuk diverifikasi oleh dinas teknis pemerintah daerah sesuai kewenangannya.',
+            },
+            {
+                number: '5',
+                title: 'Penerbitan Sertifikat Laik Fungsi (SLF)',
+                description:
+                    'Sertifikat Laik Fungsi (SLF) diterbitkan setelah seluruh persyaratan teknis dan administratif dinyatakan memenuhi ketentuan yang berlaku.',
             },
         ],
         image: {
-            src: '/img/general/layanan.png',
+            src: '/img/general/layanan.webp',
             alt: 'SLF Services Team',
         },
-        cta: {
-            title: 'Ajukan SLF Anda Sekarang & Rasakan Kemudahannya!',
-            subtitle: '',
-            buttonText: 'Konsultasi Sekarang!',
-            buttonLink: '/',
-        } as SLFServicesCTA,
+        buttonText: 'Konsultasi Sekarang',
+        buttonHref: 'https://api.whatsapp.com/send?phone=6285111444499',
+    };
+
+    // Data untuk SLF Requirements Section
+    const slfRequirementsData = {
+        title: 'Dokumen Dan Persyaratan Teknis Pengurusan Sertifikat Laik Fungsi (SLF)',
+        cards: [
+            {
+                title: 'DOKUMEN ADMINISTRASI',
+                points: [
+                    'Data Pemilik Bangunan',
+                    'Data bangunan (fungsi, luas, lokasi)',
+                    'Dokumen PBB/IMB',
+                    'Surat Pernyataan pemilik',
+                    'Dokumen Pendukung Sesuai Ketentuan Daerah',
+                ],
+                image: '/img/general/slide-1.webp',
+            },
+            {
+                title: 'DOKUMEN TEKNIS BANGUNAN',
+                points: [
+                    'Gambar As-Built Drawing, struktur, dan utilitas (MEP)',
+                    'Laporan pemeriksaan keandalan bangunan',
+                    'Rekomendasi Pengkaji Teknis Bersertifikat',
+                    'Dokumen Keselamatan bangunan',
+                ],
+                image: '/img/general/slide-2.webp',
+            },
+            {
+                title: 'SYARAT OPERASIONAL',
+                points: [
+                    'Memenuhi Standar Keselamatan Dan Keandalan Bangunan',
+                    'Pemeriksaan Mengacu PP No. 16 Tahun 2021',
+                    'Pengajuan Dilakukan Melalui Sistem SIMBG',
+                ],
+                image: '/img/general/slide-3.webp',
+            },
+        ],
+    };
+
+    // Data untuk SLF Scope Section
+    const slfScopeData = {
+        title: 'Ruang Lingkup Layanan Pengurusan Sertifikat Laik Fungsi (SLF)',
+        cards: [
+            {
+                title: 'KONSULTASI REGULASI & PERSYARATAN',
+                description:
+                    'Melakukan Screening Awal Kelengkapan Dokumen Administrasi Dan Teknis Sesuai Persyaratan SIMBG Dan Perda Setempat Agar Meminimalisir Revisi.',
+                image: '/img/general/slide-4.webp',
+            },
+            {
+                title: 'PENDAMPINGAN AUDIT TEKNIS',
+                description:
+                    'Pemeriksaan Keandalan Bangunan Oleh Pengkaji Teknis Meliputi Aspek Arsitektur, Struktur, Dan Utilitas (MEP) Sesuai Standar PP 16/2021.',
+                image: '/img/general/slide-5.webp',
+            },
+            {
+                title: 'PENGURUSAN DOKUMEN LENGKAP',
+                description:
+                    'Pengurusan Dan Pengajuan Seluruh Dokumen Administrasi Melalui Sistem SIMBG Hingga Sertifikat Laik Fungsi (SLF) Resmi Diterbitkan.',
+                image: '/img/general/slide-6.webp',
+            },
+        ],
+    };
+
+    // Data untuk FAQ Section
+    const slfFaqData = {
+        title: 'FAQ',
+        items: [
+            {
+                question: 'Apakah Semua Bangunan Wajib Memiliki SLF?',
+                answer: 'Ya. Bangunan gedung yang telah selesai dibangun dan akan digunakan wajib memiliki SLF, terutama untuk bangunan komersial, industri, perkantoran, dan fasilitas publik sesuai ketentuan peraturan perundang-undangan.',
+            },
+            {
+                question: 'Berapa Lama Masa Berlaku SLF?',
+                answer: 'Masa berlaku Sertifikat Laik Fungsi (SLF) adalah 20 tahun untuk rumah tinggal tunggal atau deret, dan 5 tahun untuk bangunan gedung lainnya seperti kantor, pabrik, atau gudang.',
+            },
+            {
+                question: 'Bagaimana Cara Memperpanjang Sertifikat Laik Fungsi (SLF)?',
+                answer: 'Perpanjangan Sertifikat Laik Fungsi (SLF) dilakukan dengan mengajukan pemeriksaan ulang keandalan bangunan oleh Pengkaji Teknis bersertifikat. Proses perpanjangan dilakukan melalui sistem SIMBG dengan melampirkan dokumen teknis terbaru dan memastikan kondisi bangunan masih memenuhi standar keselamatan dan fungsi bangunan.',
+            },
+        ],
     };
 
     return (
@@ -237,7 +336,15 @@ export default function SLF() {
                 <HeroSection {...heroData} />
                 <WhySLFSection title={whySLFTitle} cards={whySLFCards} />
 
-                <SLFServicesSection {...slfServicesData} />
+                <WhyChooseUsSection {...slfServicesData} />
+
+                {/* Dokumen & Persyaratan Section */}
+                <SLFRequirementsSection {...slfRequirementsData} />
+
+                {/* Scope & FAQ Section */}
+                <SLFScopeSection {...slfScopeData} />
+                <FAQSection {...slfFaqData} bgColor="bg-white" variant="light" />
+
                 <Footer />
             </div>
         </>

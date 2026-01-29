@@ -18,10 +18,10 @@ interface WhyChooseUsSectionProps {
 
 export default function WhyChooseUsSection({ title, points, image, buttonText, buttonHref, className = '' }: WhyChooseUsSectionProps) {
     return (
-        <section className={`relative overflow-hidden bg-hijauwhy py-16 font-roboto lg:py-24 ${className}`}>
+        <section className={`relative z-20 bg-hijauwhy py-16 font-roboto lg:py-24 ${className}`}>
             {/* Circular Image positioned at bottom left */}
             <div className="absolute bottom-0 left-0 hidden lg:block">
-                <div className="h-80 w-80 -translate-x-1/4 translate-y-1/4 transform lg:h-170 lg:w-170 xl:h-220 xl:w-220 2xl:h-250 2xl:w-250">
+                <div className="h-80 w-80 -translate-x-1/4 translate-y-1/4 transform lg:h-[32rem] lg:w-[32rem] xl:h-220 xl:w-220 2xl:h-250 2xl:w-250">
                     <img src={image.src} alt={image.alt} className="h-full w-full rounded-full object-cover shadow-2xl" />
                 </div>
             </div>
@@ -53,7 +53,7 @@ export default function WhyChooseUsSection({ title, points, image, buttonText, b
                                     {index < points.length - 1 && <div className="absolute top-12 left-5 h-16 w-0.5 bg-hijautime opacity-30"></div>}
 
                                     {/* Number Circle */}
-                                    <div className="z-10 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-hijautime text-lg font-bold text-white lg:h-12 lg:w-12">
+                                    <div className="z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-hijautime text-lg font-bold text-white lg:h-12 lg:w-12">
                                         {point.number}
                                     </div>
 
@@ -69,6 +69,8 @@ export default function WhyChooseUsSection({ title, points, image, buttonText, b
                         {/* CTA Button */}
                         <a
                             href={buttonHref}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="transform cursor-pointer rounded-lg bg-tombol px-8 py-4 text-base font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-orange-600 hover:shadow-xl lg:text-lg"
                         >
                             {buttonText}

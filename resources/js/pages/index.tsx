@@ -1,7 +1,10 @@
 import { Head } from '@inertiajs/react';
+import ComparisonTable from '../components/ComparisonTable';
+import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
 import Navbar from '../components/Navbar';
+import PortfolioSection from '../components/PortfolioSection';
 import ServicesSection from '../components/ServicesSection';
 import WhyChooseUsSection from '../components/WhyChooseUsSection';
 
@@ -31,22 +34,22 @@ export default function Index() {
     const heroData = {
         content: {
             title: {
-                line1: 'Bangunan',
-                line2: 'Aman, Legal,',
-                line3: '& Berkualitas',
+                line1: 'Jasa Pengurusan',
+                line2: 'SLF & PBG Resmi',
+                line3: 'Sesuai SIMBG',
             },
-            subtitle: 'Bersama Konsultan Sipil Profesional',
+            subtitle: 'Bersama Konsultan Izin Gedung Berpengalaman & Bersertifikat',
             description:
-                'Percayakan pengurusan izin dan legalitas bangunan Anda pada ahlinya. Kami menghadirkan layanan SLF & PBG yang cepat, tepat, dan terpercaya, sehingga Anda bisa fokus pada pembangunan tanpa ribet urusan administrasi.',
+                'Konsultan Izin Gedung merupakan konsultan teknis bangunan yang membantu pengurusan Persetujuan Bangunan Gedung (PBG) dan Sertifikat Laik Fungsi (SLF) secara resmi melalui sistem SIMBG sesuai PP No. 16 Tahun 2021. Tim ahli kami memastikan proses izin bangunan berjalan cepat, tepat, dan sesuai standar teknis pemerintah.',
             button: {
-                text: 'Konsultasi Sekarang!',
+                text: 'Konsultasi Gratis',
                 bgColor: 'bg-tombol',
                 hoverColor: 'hover:bg-orange-600',
-                href: '/',
+                href: 'https://api.whatsapp.com/send?phone=6285111444499',
             },
         },
         image: {
-            src: '/img/general/hero-1.png',
+            src: '/img/general/hero-1.webp',
             alt: 'Professional Construction Consultant',
             mobileBackground: {
                 overlay: 'rgba(255, 255, 255, 0.85)',
@@ -71,7 +74,7 @@ export default function Index() {
                 ),
                 title: 'SERTIFIKAT LAIK FUNGSI',
                 description:
-                    'Buktikan bangunan Anda aman dan layak digunakan. SLF memastikan gedung memenuhi standar keselamatan, kesehatan, dan kenyamanan.',
+                    'Sertifikat Laik Fungsi (SLF) adalah dokumen resmi pemerintah daerah yang menyatakan bahwa bangunan gedung telah memenuhi standar keselamatan, kesehatan, kenyamanan, dan kemudahan sesuai fungsi bangunan setelah selesai dibangun dan sebelum digunakan secara operasional.',
                 bgColor: 'bg-transparent',
                 iconBgColor: 'bg-transparent',
             },
@@ -86,9 +89,41 @@ export default function Index() {
                 ),
                 title: 'PERSETUJUAN BANGUNAN GEDUNG',
                 description:
-                    'Bangun dengan tenang dan sesuai aturan. PBG menjamin desain dan konstruksi Anda sah secara hukum serta sesuai standar teknis.',
+                    'Persetujuan Bangunan Gedung (PBG) adalah perizinan resmi pemerintah daerah yang diberikan kepada pemilik bangunan sebelum memulai pekerjaan konstruksi, untuk membangun baru, mengubah, memperluas, atau merawat bangunan sesuai standar teknis sebagai pengganti IMB.',
                 bgColor: 'bg-transparent',
                 iconBgColor: 'bg-transparent',
+            },
+        ],
+    };
+
+    // Comparison Table Data
+    const comparisonData = {
+        title: 'Perbedaan PBG Dan SLF',
+        columns: [
+            { header: 'Aspek Pembeda', accessor: 'aspect' },
+            { header: 'PBG (Persetujuan Bangunan Gedung)', accessor: 'pbg' },
+            { header: 'SLF (Sertifikat Laik Fungsi)', accessor: 'slf' },
+        ],
+        data: [
+            {
+                aspect: 'Waktu Pengurusan',
+                pbg: 'Sebelum Bangunan Didirikan',
+                slf: 'Setelah Bangunan Selesai Dibangun',
+            },
+            {
+                aspect: 'Fungsi Utama',
+                pbg: 'Izin Memulai Konstruksi (Legalitas Desain)',
+                slf: 'Izin Operasional Bangunan (Legalitas Fungsi)',
+            },
+            {
+                aspect: 'Masa Berlaku',
+                pbg: 'Sekali Seumur Hidup (Selama Tidak Berubah)',
+                slf: '5 Tahun (Umum) Atau 20 Tahun (Rumah Tinggal)',
+            },
+            {
+                aspect: 'Dasar Hukum',
+                pbg: 'PP No. 16 Tahun 2021',
+                slf: 'PP No. 16 Tahun 2021',
             },
         ],
     };
@@ -100,31 +135,63 @@ export default function Index() {
             {
                 number: '1',
                 title: 'Profesional & Berpengalaman',
-                description: 'Tim ahli dengan pengalaman bertahun-tahun di bidang konstruksi, regulasi, dan perizinan bangunan.',
+                description:
+                    'Didukung tenaga ahli teknik sipil dan arsitek yang memiliki Sertifikat Keahlian (SKA) resmi dan berpengalaman menangani berbagai kompleksitas bangunan.',
             },
             {
                 number: '2',
                 title: 'Cepat & Efisien',
-                description: 'Proses pengurusan izin tanpa ribet, transparan, dan sesuai kebutuhan Anda.',
+                description:
+                    'Timeline kerja yang jelas sejak awal, dengan pelaporan progres berkala agar pengurusan izin berjalan efisien sesuai target waktu.',
             },
             {
                 number: '3',
                 title: 'Pendampingan Menyeluruh',
-                description: 'Mulai dari konsultasi awal hingga izin terbit, kami selalu mendampingi Anda.',
+                description:
+                    'Kami mengawal proses upload dan verifikasi teknis di sistem SIMBG (Sistem Informasi Manajemen Bangunan Gedung) hingga dokumen terbit.',
             },
             {
                 number: '4',
                 title: 'Legalitas Terjamin',
-                description: 'Semua dokumen dipastikan sah sesuai aturan pemerintah terbaru, memberi Anda rasa aman dan tenang.',
+                description:
+                    'Dokumen yang diterbitkan dijamin asli, valid, dan mematuhi standar teknis PP No. 16 Tahun 2021 serta peraturan daerah setempat.',
             },
         ],
         image: {
-            src: '/img/general/profile.png',
+            src: '/img/general/profile.webp',
             alt: 'Professional team',
         },
         buttonText: 'Konsultasi Sekarang!',
-        buttonHref: '/',
+        buttonHref: 'https://api.whatsapp.com/send?phone=6285111444499',
     };
+
+    // FAQ Section Data
+    const faqData = {
+        title: 'FAQ',
+        items: [
+            {
+                question: 'Apa Itu Sertifikat Laik Fungsi (SLF) Dan Mengapa Saya Membutuhkannya?',
+                answer: 'Sertifikat Laik Fungsi (SLF) adalah dokumen resmi pemerintah daerah yang menyatakan bahwa sebuah bangunan telah memenuhi persyaratan teknis dan layak digunakan sesuai dengan fungsi bangunannya.',
+            },
+            {
+                question: 'Apa Perbedaan Antara IMB Dan PBG?',
+                answer: 'Izin Mendirikan Bangunan (IMB) adalah sistem perizinan bangunan lama, sedangkan Persetujuan Bangunan Gedung (PBG) merupakan perizinan pengganti IMB yang berlaku sesuai PP No. 16 Tahun 2021 dan berfokus pada standar teknis bangunan.',
+            },
+            {
+                question: 'Apakah Bangunan Lama Atau Eksisting Wajib Mengurus SLF?',
+                answer: 'Ya, bangunan lama atau bangunan eksisting WAJIB mengurus Sertifikat Laik Fungsi (SLF) untuk memastikan bangunan tetap memenuhi persyaratan teknis keselamatan dan kelayakan fungsi. Untuk bangunan eksisting yang belum memiliki SLF, proses pengurusan dilakukan melalui pemeriksaan kelaikan fungsi (assessment) oleh Pengkaji Teknis bersertifikat.',
+            },
+            {
+                question: 'Apakah Saya Memerlukan Jasa Konsultan Untuk Mengurus PBG/SLF?',
+                answer: 'Pengurusan PBG dan SLF memerlukan penanggung jawab teknis yang memiliki Sertifikat Keahlian (SKA/SKK) sebagaimana diwajibkan dalam sistem SIMBG. Oleh karena itu, penggunaan jasa konsultan teknis bersertifikat sangat disarankan untuk memastikan dokumen lolos verifikasi dinas.',
+            },
+            {
+                question: 'Berapa Biaya Pengurusan PBG/SLF?',
+                answer: 'Biaya bervariasi tergantung luas bangunan, fungsi, dan kompleksitas struktur. Hubungi kami untuk perhitungan retribusi resmi dan penawaran jasa konsultasi." (Ini cukup aman tapi relevan).',
+            },
+        ],
+    };
+
     return (
         <>
             <Head title="Konsultan Sipil Profesional - Izin Gedung SLF & PBG Terpercaya">
@@ -234,8 +301,17 @@ export default function Index() {
             {/* Services Section */}
             <ServicesSection {...servicesData} />
 
+            {/* Comparison Table Section */}
+            <ComparisonTable {...comparisonData} />
+
             {/* Why Choose Us Section */}
             <WhyChooseUsSection {...whyChooseUsData} />
+
+            {/* Portfolio Section */}
+            <PortfolioSection />
+
+            {/* FAQ Section */}
+            <FAQSection {...faqData} />
 
             <Footer />
         </>
