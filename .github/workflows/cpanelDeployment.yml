@@ -14,8 +14,8 @@ jobs:
       - name: Install PHP and Composer
         uses: shivammathur/setup-php@v2
         with:
-          php-version: "8.3" # Updated to PHP 8.3 to match openspout/openspout requirements
-          tools: "composer"
+          php-version: '8.3' # Updated to PHP 8.3 to match openspout/openspout requirements
+          tools: 'composer'
 
       - name: Install PHP dependencies
         run: composer install --no-dev --optimize-autoloader
@@ -30,5 +30,12 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           exclude: |
-            **/vendor/**
+            **/.git*
+            **/.git*/**
+            **/.github*/**
             **/node_modules/**
+            .env
+            .env.example
+            tests/**
+            phpunit.xml
+            README.md
