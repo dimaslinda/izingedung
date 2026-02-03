@@ -18,6 +18,7 @@ interface HeroContent {
 interface HeroImage {
     src: string;
     alt: string;
+    objectPosition?: string;
     mobileBackground?: {
         overlay?: string;
         position?: string;
@@ -29,9 +30,12 @@ interface HeroSectionProps {
     content: HeroContent;
     image: HeroImage;
     className?: string;
+    imageWrapperClassName?: string;
+    imageClassName?: string;
 }
 
-export default function HeroSection({ content, image, className = '' }: HeroSectionProps) {
+export default function HeroSection({ content, image, className = '', imageWrapperClassName, imageClassName }: HeroSectionProps) {
+    const { src, alt, objectPosition = 'center' } = image;
     const { overlay = 'rgba(255, 255, 255, 0.85)', position = 'center', size = 'cover' } = image.mobileBackground || {};
 
     return (
@@ -40,7 +44,7 @@ export default function HeroSection({ content, image, className = '' }: HeroSect
             <div
                 className="absolute inset-0 lg:hidden"
                 style={{
-                    backgroundImage: `linear-gradient(${overlay}, ${overlay}), url(${image.src})`,
+                    backgroundImage: `linear-gradient(${overlay}, ${overlay}), url(${src})`,
                     backgroundSize: size,
                     backgroundPosition: position,
                     backgroundRepeat: 'no-repeat',
@@ -81,14 +85,17 @@ export default function HeroSection({ content, image, className = '' }: HeroSect
             </div>
 
             {/* Hero Image - Background on mobile/tablet, positioned image on large screens */}
-            <div className="absolute -top-52 -right-52 z-10 hidden lg:block 2xl:-top-80">
+            <div className={`absolute -right-52 z-10 hidden lg:block ${imageWrapperClassName || '-top-52 2xl:-top-80'}`}>
                 <div className="relative">
-                    <div className="absolute inset-0 scale-110 transform rounded-full bg-gradient-to-r from-blue-400 to-purple-500 opacity-20 blur-3xl"></div>
-                    <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="relative z-10 h-200 w-200 rounded-full border-8 border-[#B6C3F35C] object-cover shadow-2xl xl:h-250 xl:w-250 2xl:h-300 2xl:w-300"
-                    />
+                    <div className="absolute inset-0 scale-110 transform rounded-full bg-linear-to-r from-blue-400 to-purple-500 opacity-20 blur-3xl"></div>
+                    <div className="relative z-10 h-200 w-200 overflow-hidden rounded-full border-8 border-[#B6C3F35C] shadow-2xl xl:h-250 xl:w-250 2xl:h-300 2xl:w-300">
+                        <img
+                            src={src}
+                            alt={alt}
+                            className={`h-full w-full object-cover ${imageClassName || ''}`}
+                            style={{ objectPosition: objectPosition }}
+                        />
+                    </div>
                 </div>
             </div>
         </section>

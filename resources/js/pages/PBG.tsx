@@ -1,4 +1,6 @@
-import SLFServicesSection, { SLFServicesCTA } from '@/components/SLFServicesSection';
+import ComparisonTable from '@/components/ComparisonTable';
+import FAQSection from '@/components/FAQSection';
+import SLFScopeSection from '@/components/SLFScopeSection';
 import WhySLFSection, { WhySLFCard } from '@/components/WhySLFSection';
 import { Head } from '@inertiajs/react';
 import Footer from '../components/Footer';
@@ -46,8 +48,9 @@ export default function PBG() {
             },
         },
         image: {
-            src: '/img/general/hero-3.png',
+            src: '/img/general/pbg-banner.webp',
             alt: 'PBG Building Permit Service',
+            objectPosition: 'center 10%',
             mobileBackground: {
                 overlay: 'rgba(255, 255, 255, 0.85)',
                 position: 'center',
@@ -56,78 +59,107 @@ export default function PBG() {
         },
     };
     // Data untuk WhyPBG Section
-    const whySLFTitle = 'Mengapa PBG Begitu Penting?';
+    const whySLFTitle = 'Mengapa PBG Wajib Ada Sebelum Membangun?';
     const whySLFCards: WhySLFCard[] = [
         {
             title: 'Legalitas Penuh',
             description:
-                ' PBG adalah bukti sah bahwa bangunan Anda telah sesuai dengan ketentuan teknis dan tata ruang dari pemerintah. Dengan PBG, Anda memiliki pegangan hukum yang jelas.',
+                'PBG merupakan persetujuan resmi dari pemerintah daerah sebagai pengganti IMB. Dokumen ini menyatakan bahwa rencana teknis bangunan telah diverifikasi dan sesuai dengan ketentuan tata ruang yang berlaku.',
         },
         {
             title: 'Terhindar dari Risiko Sanksi',
             description:
-                ' Tanpa PBG, bangunan berisiko terkena denda, pembongkaran, hingga masalah hukum. Dengan mengurus PBG sejak awal, Anda melindungi investasi bangunan dari kerugian besar.',
+                'Tanpa PBG, kegiatan pembangunan berisiko dikenakan sanksi administratif seperti penghentian pekerjaan, denda, hingga perintah pembongkaran. Mengurus PBG sejak awal membantu melindungi investasi konstruksi Anda',
         },
         {
             title: 'Pembangunan Lebih Terarah & Aman',
             description:
-                ' PBG memastikan bahwa proses pembangunan tidak hanya indah secara desain, tetapi juga aman, efisien, dan sesuai standar yang berlaku. Hasilnya, bangunan lebih kokoh dan berfungsi optimal sesuai peruntukannya.',
+                'Dokumen PBG memastikan perencanaan Dokumen PBG/IMB struktur bangunan memenuhi standar keselamatan teknis (SNI). PBG juga menjadi persyaratan utama dalam proses penerbitan Sertifikat Laik Fungsi [E1] (SLF) setelah bangunan selesai dibangun.',
         },
     ];
 
-    const whySLFTitle2 = 'Layanan Kami dalam Pengurusan PBG';
-    const whySLFCards2: WhySLFCard[] = [
-        {
-            title: 'Analisis Dokumen & Desain',
-            description: 'Kami membantu menyiapkan dan menyesuaikan seluruh dokumen teknis dan administratif sesuai persyaratan terbaru.',
-        },
-        {
-            title: 'Pendampingan Teknis & Administrasi',
-            description:
-                'Tim ahli kami mendampingi Anda dalam setiap tahap, mulai dari pengajuan, koordinasi dengan pihak terkait, hingga verifikasi teknis.',
-        },
-        {
-            title: 'Pengurusan Perizinan Hingga Tuntas',
-            description:
-                ' PBG memastikan bahwa proses pembangunan tidak hanya indah secara desain, tetapi juga aman, efisien, dan sesuai standar yang berlaku. Hasilnya, bangunan lebih kokoh dan berfungsi optimal sesuai peruntukannya.',
-        },
-    ];
-
-    // Data untuk PBG Services Section
-    const slfServicesData = {
-        title: 'Layanan Kami Dalam',
-        subtitle: 'Pengurusan PBG',
-        points: [
+    // Comparison Table Data
+    const comparisonData = {
+        title: 'Perbedaan PBG dan IMB dalam Perizinan Bangunan Gedung',
+        columns: [
+            { header: 'PBG (Persetujuan Bangunan Gedung)', accessor: 'aspect' },
+            { header: 'IMB (Izin Mendirikan Bangunan)', accessor: 'pbg' },
+        ],
+        data: [
             {
-                number: '1',
-                title: 'Berpengalaman dalam regulasi & konstruksi',
-                description: 'Kami memahami seluk-beluk aturan terbaru tentang PBG.',
+                aspect: 'Berlaku sejak diterbitkannya PP No. 16 Tahun 2021',
+                pbg: 'Berlaku sebelum diberlakukannya PP No. 16 Tahun 2021',
             },
             {
-                number: '2',
-                title: 'Proses cepat & transparan',
-                description: 'Semua langkah dijalankan secara jelas, tanpa ada yang disembunyikan.',
+                aspect: 'Berbasis kesesuaian rencana teknis bangunan',
+                pbg: 'Berbasis izin administratif pembangunan',
             },
             {
-                number: '3',
-                title: 'Pendampingan total',
-                description: 'Kami mendampingi Anda dari konsultasi awal hingga izin selesai diterbitkan.',
+                aspect: 'Verifikasi dilakukan melalui sistem SIMBG',
+                pbg: 'Proses manual dan berbeda antar daerah',
             },
             {
-                number: '4',
-                title: 'Legalitas terjamin',
-                description: 'Semua proses mengikuti regulasi pemerintah terbaru, sehingga Anda bisa tenang membangun.',
+                aspect: 'Melibatkan Tim Perencana Teknis bersertifikat (Arsitek & Sipil)',
+                pbg: 'Tidak terintegrasi dengan sistem nasional',
+            },
+            {
+                aspect: 'Fokus pada keselamatan, fungsi, dan kesesuaian tata ruang',
+                pbg: 'Sudah tidak berlaku dan digantikan oleh PBG',
+            },
+            {
+                aspect: 'Wajib dimiliki sebelum membangun atau merenovasi',
             },
         ],
-        image: {
-            src: '/img/general/layanan-2.png',
-            alt: 'PBG Services Team',
-        },
-        cta: {
-            title: 'Ajukan PBG Anda Sekarang & Mulai Pembangunan!',
-            subtitle: '',
-            buttonText: 'Konsultasi Sekarang!',
-        } as SLFServicesCTA,
+    };
+
+    // Data untuk SLF Scope Section
+    const slfScopeData = {
+        title: 'Ruang Lingkup Layanan Persetujuan Bangunan Gedung (PBG)',
+        cards: [
+            {
+                title: 'Penguasaan Regulasi PBG & Tata Ruang',
+                description:
+                    'Kami memastikan seluruh proses pengurusan Persetujuan Bangunan Gedung (PBG) mengacu pada ketentuan PP No. 16 Tahun 2021 serta kesesuaian tata ruang daerah untuk meminimalkan risiko penolakan dokumen.',
+                image: '/img/general/pbg-1.webp',
+            },
+            {
+                title: 'Proses Pengurusan PBG Terstruktur & Transparan',
+                description:
+                    'Seluruh tahapan pengurusan PBG dilakukan secara sistematis melalui SIMBG, dengan alur jelas dan dapat dipantau tanpa proses tersembunyi.',
+                image: '/img/general/pbg-2.webp',
+            },
+            {
+                title: 'Pendampingan Teknis dari Perencana Bersertifikat',
+                description:
+                    'Dokumen perencanaan teknis disusun dan ditinjau oleh Arsitek dan Tenaga Teknik bersertifikat agar rencana bangunan memenuhi standar teknis dan persyaratan PBG.',
+                image: '/img/general/pbg-3.webp',
+            },
+            {
+                title: 'Legalitas PBG Sesuai Ketentuan Pemerintah',
+                description:
+                    'Persetujuan Bangunan Gedung (PBG) diterbitkan secara resmi oleh Pemerintah Daerah, sehingga dapat digunakan sebagai dasar legal pelaksanaan pembangunan tanpa risiko sanksi administratif.',
+                image: '/img/general/pbg-4.webp',
+            },
+        ],
+    };
+
+    // Data untuk FAQ Section
+    const pbgFaqData = {
+        title: 'FAQ',
+        items: [
+            {
+                question: 'Apakah Semua Bangunan Wajib Memiliki SLF?',
+                answer: 'Ya. Bangunan gedung yang telah selesai dibangun dan akan digunakan wajib memiliki SLF, terutama untuk bangunan komersial, industri, perkantoran, dan fasilitas publik sesuai ketentuan peraturan perundang-undangan.',
+            },
+            {
+                question: 'Berapa Lama Masa Berlaku SLF?',
+                answer: 'Masa berlaku Sertifikat Laik Fungsi (SLF) adalah 20 tahun untuk rumah tinggal tunggal atau deret, dan 5 tahun untuk bangunan gedung lainnya seperti kantor, pabrik, atau gudang.',
+            },
+            {
+                question: 'Bagaimana Cara Memperpanjang Sertifikat Laik Fungsi (SLF)?',
+                answer: 'Perpanjangan Sertifikat Laik Fungsi (SLF) dilakukan dengan mengajukan pemeriksaan ulang keandalan bangunan oleh Pengkaji Teknis bersertifikat. Proses perpanjangan dilakukan melalui sistem SIMBG dengan melampirkan dokumen teknis terbaru dan memastikan kondisi bangunan masih memenuhi standar keselamatan dan fungsi bangunan.',
+            },
+        ],
     };
 
     return (
@@ -288,11 +320,13 @@ export default function PBG() {
             </Head>
             <div className="min-h-screen bg-white">
                 <Navbar {...navbarData} />
-                <HeroSection {...heroData} />
+                <HeroSection {...heroData} imageClassName="translate-y-10" />
                 <WhySLFSection title={whySLFTitle} cards={whySLFCards} />
-                <WhySLFSection title={whySLFTitle2} cards={whySLFCards2} />
-
-                <SLFServicesSection {...slfServicesData} />
+                {/* Comparison Table Section */}
+                <ComparisonTable {...comparisonData} />
+                {/* Scope & FAQ Section */}
+                <SLFScopeSection {...slfScopeData} gridCols={2} />
+                <FAQSection {...pbgFaqData} bgColor="bg-white" variant="light" />
                 <Footer />
             </div>
         </>

@@ -7,9 +7,10 @@ interface SLFScopeCard {
 interface SLFScopeSectionProps {
     title: string;
     cards: SLFScopeCard[];
+    gridCols?: 2 | 3 | 4;
 }
 
-export default function SLFScopeSection({ title, cards }: SLFScopeSectionProps) {
+export default function SLFScopeSection({ title, cards, gridCols = 3 }: SLFScopeSectionProps) {
     return (
         <section className="relative font-roboto">
             {/* Background Background - Full height on mobile, partial on desktop to create hanging card effect */}
@@ -17,7 +18,9 @@ export default function SLFScopeSection({ title, cards }: SLFScopeSectionProps) 
 
             <div className="relative container mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
                 <h2 className="mb-12 text-center text-2xl font-bold text-white md:text-3xl lg:text-4xl">{title}</h2>
-                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div
+                    className={`grid grid-cols-1 gap-8 md:grid-cols-2 ${gridCols === 2 ? 'lg:grid-cols-2 lg:px-32' : gridCols === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'}`}
+                >
                     {cards.map((card, index) => (
                         <div
                             key={index}

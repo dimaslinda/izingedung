@@ -137,7 +137,7 @@ export default function SLF() {
                     'Surat Pernyataan pemilik',
                     'Dokumen Pendukung Sesuai Ketentuan Daerah',
                 ],
-                image: '/img/general/slide-1.webp',
+                image: '/img/general/dokumen-1.webp',
             },
             {
                 title: 'DOKUMEN TEKNIS BANGUNAN',
@@ -147,7 +147,7 @@ export default function SLF() {
                     'Rekomendasi Pengkaji Teknis Bersertifikat',
                     'Dokumen Keselamatan bangunan',
                 ],
-                image: '/img/general/slide-2.webp',
+                image: '/img/general/dokumen-2.webp',
             },
             {
                 title: 'SYARAT OPERASIONAL',
@@ -156,7 +156,7 @@ export default function SLF() {
                     'Pemeriksaan Mengacu PP No. 16 Tahun 2021',
                     'Pengajuan Dilakukan Melalui Sistem SIMBG',
                 ],
-                image: '/img/general/slide-3.webp',
+                image: '/img/general/dokumen-3.webp',
             },
         ],
     };
@@ -169,19 +169,19 @@ export default function SLF() {
                 title: 'KONSULTASI REGULASI & PERSYARATAN',
                 description:
                     'Melakukan Screening Awal Kelengkapan Dokumen Administrasi Dan Teknis Sesuai Persyaratan SIMBG Dan Perda Setempat Agar Meminimalisir Revisi.',
-                image: '/img/general/slide-4.webp',
+                image: '/img/general/ruang-1.webp',
             },
             {
                 title: 'PENDAMPINGAN AUDIT TEKNIS',
                 description:
                     'Pemeriksaan Keandalan Bangunan Oleh Pengkaji Teknis Meliputi Aspek Arsitektur, Struktur, Dan Utilitas (MEP) Sesuai Standar PP 16/2021.',
-                image: '/img/general/slide-5.webp',
+                image: '/img/general/ruang-2.webp',
             },
             {
                 title: 'PENGURUSAN DOKUMEN LENGKAP',
                 description:
                     'Pengurusan Dan Pengajuan Seluruh Dokumen Administrasi Melalui Sistem SIMBG Hingga Sertifikat Laik Fungsi (SLF) Resmi Diterbitkan.',
-                image: '/img/general/slide-6.webp',
+                image: '/img/general/ruang-3.webp',
             },
         ],
     };
