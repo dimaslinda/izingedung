@@ -52,6 +52,15 @@
         gtag('config', 'AW-17887202522');
     </script>
 
+    <!-- Event snippet for Tombol Whatsapp conversion page -->
+    <script>
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17887202522/xr4XCNv4tvkbENqZpNFC',
+            'value': 1.0,
+            'currency': 'IDR'
+        });
+    </script>
+
     {{-- Inline style to set the HTML background color based on our theme in app.css --}}
     <style>
         html {
