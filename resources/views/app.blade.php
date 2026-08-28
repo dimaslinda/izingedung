@@ -24,6 +24,8 @@
     </script>
     <!-- End Google Tag Manager -->
 
+
+
     {{-- Inline script to detect system dark mode preference and apply it immediately --}}
     <script>
         (function() {
@@ -40,7 +42,7 @@
     </script>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17887202522"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18414966281"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -49,13 +51,13 @@
         }
         gtag('js', new Date());
 
-        gtag('config', 'AW-17887202522');
+        gtag('config', 'AW-18414966281');
     </script>
 
     <!-- Event snippet for Tombol Whatsapp conversion page -->
     <script>
         gtag('event', 'conversion', {
-            'send_to': 'AW-17887202522/xr4XCNv4tvkbENqZpNFC',
+            'send_to': 'AW-18414966281/xr4XCNv4tvkbENqZpNFC',
             'value': 1.0,
             'currency': 'IDR'
         });
