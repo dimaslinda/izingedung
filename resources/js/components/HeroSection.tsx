@@ -73,6 +73,12 @@ export default function HeroSection({ content, image, className = '', imageWrapp
                                 href={content.button.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                onClick={(e) => {
+                                    if (typeof window !== 'undefined' && typeof (window as any).gtag_report_conversion === 'function') {
+                                        e.preventDefault();
+                                        (window as any).gtag_report_conversion(content.button.href, '_blank');
+                                    }
+                                }}
                                 className={`cursor-pointer rounded-sm px-8 py-3 font-medium text-white shadow-lg transition-colors duration-200 ${
                                     content.button.bgColor || 'bg-tombol'
                                 } ${content.button.hoverColor || 'hover:bg-orange-600'} hover:shadow-xl`}

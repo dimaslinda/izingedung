@@ -54,13 +54,26 @@
         gtag('config', 'AW-18414966281');
     </script>
 
-    <!-- Event snippet for Tombol Whatsapp conversion page -->
+    <!-- Event snippet for Klik keluar conversion page -->
     <script>
-        gtag('event', 'conversion', {
-            'send_to': 'AW-18414966281/xr4XCNv4tvkbENqZpNFC',
-            'value': 1.0,
-            'currency': 'IDR'
-        });
+        function gtag_report_conversion(url, target) {
+            var callback = function () {
+                if (typeof(url) != 'undefined' && url) {
+                    if (target === '_blank') {
+                        window.open(url, '_blank');
+                    } else {
+                        window.location = url;
+                    }
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-18414966281/sXhLCOzosekcEIms-MxE',
+                'value': 1.0,
+                'currency': 'IDR',
+                'event_callback': callback
+            });
+            return false;
+        }
     </script>
 
     {{-- Inline style to set the HTML background color based on our theme in app.css --}}

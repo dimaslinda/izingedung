@@ -44,7 +44,7 @@ export default function PBG() {
                 text: 'Konsultasi Sekarang!',
                 bgColor: 'bg-tombol',
                 hoverColor: 'hover:bg-orange-600',
-                href: '/',
+                href: 'https://api.whatsapp.com/send?phone=6285111444499',
             },
         },
         image: {
