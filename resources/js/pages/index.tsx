@@ -187,7 +187,7 @@ export default function Index() {
             },
             {
                 question: 'Berapa Biaya Pengurusan PBG/SLF?',
-                answer: 'Biaya bervariasi tergantung luas bangunan, fungsi, dan kompleksitas struktur. Hubungi kami untuk perhitungan retribusi resmi dan penawaran jasa konsultasi." (Ini cukup aman tapi relevan).',
+                answer: 'Biaya bervariasi tergantung luas bangunan, fungsi, dan kompleksitas struktur. Hubungi kami untuk perhitungan retribusi resmi dan penawaran jasa konsultasi.',
             },
         ],
     };
