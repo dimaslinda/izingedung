@@ -74,9 +74,9 @@ export default function HeroSection({ content, image, className = '', imageWrapp
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={(e) => {
-                                    if (typeof window !== 'undefined' && typeof (window as any).gtag_report_conversion === 'function') {
+                                    if (typeof window !== 'undefined' && typeof window.gtag_report_conversion === 'function') {
                                         e.preventDefault();
-                                        (window as any).gtag_report_conversion(content.button.href, '_blank');
+                                        window.gtag_report_conversion(content.button.href, '_blank');
                                     }
                                 }}
                                 className={`cursor-pointer rounded-sm px-8 py-3 font-medium text-white shadow-lg transition-colors duration-200 ${

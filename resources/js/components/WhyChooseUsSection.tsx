@@ -72,9 +72,9 @@ export default function WhyChooseUsSection({ title, points, image, buttonText, b
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={(e) => {
-                                if (typeof window !== 'undefined' && typeof (window as any).gtag_report_conversion === 'function') {
+                                if (typeof window !== 'undefined' && typeof window.gtag_report_conversion === 'function') {
                                     e.preventDefault();
-                                    (window as any).gtag_report_conversion(buttonHref, '_blank');
+                                    window.gtag_report_conversion(buttonHref, '_blank');
                                 }
                             }}
                             className="transform cursor-pointer rounded-lg bg-tombol px-8 py-4 text-base font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-orange-600 hover:shadow-xl lg:text-lg"

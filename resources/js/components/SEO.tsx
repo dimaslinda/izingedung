@@ -1,5 +1,5 @@
-import React from 'react';
 import { Head } from '@inertiajs/react';
+import React from 'react';
 
 // Schema.org structured data types
 interface SchemaOrgBase {
@@ -90,57 +90,57 @@ const SEO: React.FC<SEOProps> = ({
     ogType = 'website',
     structuredData,
     breadcrumbs,
-    faqData
+    faqData,
 }) => {
     const fullTitle = title.includes('|') ? title : `${title} | Izin Gedung`;
-    
+
     // Default Organization Schema
     const organizationSchema = {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Izin Gedung",
-        "url": "https://izingedung.id",
-        "logo": "https://izingedung.id/img/logo.png",
-        "description": "Konsultan profesional untuk pengurusan izin bangunan, SLF, dan PBG dengan layanan terpercaya dan berpengalaman.",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+62-xxx-xxxx-xxxx",
-            "contactType": "customer service",
-            "areaServed": "Indonesia",
-            "availableLanguage": "Indonesian"
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'Izin Gedung',
+        url: 'https://izingedung.id',
+        logo: 'https://izingedung.id/img/logo.png',
+        description: 'Konsultan profesional untuk pengurusan izin bangunan, SLF, dan PBG dengan layanan terpercaya dan berpengalaman.',
+        contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: '+62-xxx-xxxx-xxxx',
+            contactType: 'customer service',
+            areaServed: 'Indonesia',
+            availableLanguage: 'Indonesian',
         },
-        "sameAs": [
-            "https://www.facebook.com/izingedung",
-            "https://www.instagram.com/izingedung",
-            "https://www.linkedin.com/company/izingedung"
-        ]
+        sameAs: ['https://www.facebook.com/izingedung', 'https://www.instagram.com/izingedung', 'https://www.linkedin.com/company/izingedung'],
     };
 
     // Breadcrumb Schema
-    const breadcrumbSchema = breadcrumbs ? {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": breadcrumbs.map((item, index) => ({
-            "@type": "ListItem",
-            "position": index + 1,
-            "name": item.name,
-            "item": item.url
-        }))
-    } : null;
+    const breadcrumbSchema = breadcrumbs
+        ? {
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              itemListElement: breadcrumbs.map((item, index) => ({
+                  '@type': 'ListItem',
+                  position: index + 1,
+                  name: item.name,
+                  item: item.url,
+              })),
+          }
+        : null;
 
     // FAQ Schema
-    const faqSchema = faqData ? {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": faqData.map(faq => ({
-            "@type": "Question",
-            "name": faq.question,
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-            }
-        }))
-    } : null;
+    const faqSchema = faqData
+        ? {
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: faqData.map((faq) => ({
+                  '@type': 'Question',
+                  name: faq.question,
+                  acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: faq.answer,
+                  },
+              })),
+          }
+        : null;
 
     return (
         <Head title={fullTitle}>
@@ -170,38 +170,21 @@ const SEO: React.FC<SEOProps> = ({
             <meta name="twitter:image" content={ogImage} />
 
             {/* Structured Data - Organization Schema */}
-            <script type="application/ld+json">
-                {JSON.stringify(organizationSchema)}
-            </script>
+            <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
 
             {/* Custom Structured Data */}
-            {structuredData && (
-                <script type="application/ld+json">
-                    {JSON.stringify(structuredData)}
-                </script>
-            )}
+            {structuredData && <script type="application/ld+json">{JSON.stringify(structuredData)}</script>}
 
             {/* Breadcrumb Schema */}
-            {breadcrumbSchema && (
-                <script type="application/ld+json">
-                    {JSON.stringify(breadcrumbSchema)}
-                </script>
-            )}
+            {breadcrumbSchema && <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>}
 
             {/* FAQ Schema */}
-            {faqSchema && (
-                <script type="application/ld+json">
-                    {JSON.stringify(faqSchema)}
-                </script>
-            )}
+            {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
 
             {/* Font Links */}
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-            <link
-                href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-                rel="stylesheet"
-            />
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
         </Head>
     );
 };

@@ -35,8 +35,8 @@ export default function FAQSection({ title = 'FAQ', items, className = '', bgCol
                         <div
                             key={index}
                             className={`overflow-hidden rounded-lg border transition-all duration-300 ${
-                                isLight 
-                                    ? 'border-hijauwhy bg-hijauwhy hover:bg-hijauwhy/90' 
+                                isLight
+                                    ? 'border-hijauwhy bg-hijauwhy hover:bg-hijauwhy/90'
                                     : 'border-white/20 bg-white/10 backdrop-blur-sm hover:bg-white/15'
                             }`}
                         >
@@ -44,23 +44,12 @@ export default function FAQSection({ title = 'FAQ', items, className = '', bgCol
                                 onClick={() => toggleAccordion(index)}
                                 className="flex w-full items-center justify-between px-6 py-4 text-left text-white focus:outline-none"
                             >
-                                <span className="text-lg font-bold leading-tight md:text-xl pr-8">
-                                    {item.question}
-                                </span>
-                                <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-white transition-transform duration-300 ${openIndex === index ? 'rotate-180 bg-white text-hijauwhy' : 'text-white'}`}>
-                                    <svg
-                                        className="h-4 w-4"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth={3}
-                                            d="M19 9l-7 7-7-7"
-                                        />
+                                <span className="pr-8 text-lg leading-tight font-bold md:text-xl">{item.question}</span>
+                                <span
+                                    className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-white transition-transform duration-300 ${openIndex === index ? 'rotate-180 bg-white text-hijauwhy' : 'text-white'}`}
+                                >
+                                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
                                     </svg>
                                 </span>
                             </button>
@@ -69,7 +58,7 @@ export default function FAQSection({ title = 'FAQ', items, className = '', bgCol
                                     openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                                 }`}
                             >
-                                <div className={`px-6 pb-6 pt-0 ${isLight ? 'text-white' : 'text-white/90'}`}>
+                                <div className={`px-6 pt-0 pb-6 ${isLight ? 'text-white' : 'text-white/90'}`}>
                                     {isLight && <div className="mb-4 h-px w-full bg-white/20"></div>}
                                     <p className="leading-relaxed">{item.answer}</p>
                                 </div>
